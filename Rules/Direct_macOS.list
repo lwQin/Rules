@@ -1,2 +1,3 @@
+# 下载软件
 PROCESS-NAME,/Applications/Thunder.app/Contents/XPCServices/DownloadService.xpc/Contents/MacOS/DownloadService
 PROCESS-NAME,/Applications/Motrix.app/Contents/Resources/engine/aria2c

@@ -9639,8 +9639,8 @@ URL-REGEX,^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.common\.fetTimestamp
 URL-REGEX,^https?:\/\/.+/img\/ad\.union\.api\/
 URL-REGEX,^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/.+\.tc\.qq\.com\/.+p201\.1\.mp4\?
 URL-REGEX,^https:\/\/emdcadvertise\.eastmoney\.com\/infoService
-# URL-REGEX,^https?:\/\/bdsp-x\.jd\.com\/adx\/
-# URL-REGEX,^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
+URL-REGEX,^https?:\/\/bdsp-x\.jd\.com\/adx\/
+URL-REGEX,^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/
 URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/na\/m\/adInfo
 URL-REGEX,^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/(aladdin\/na\/m\/getLoadingPicture|aladdin\/na\/m\/getLoadingPicture)
 # URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts)

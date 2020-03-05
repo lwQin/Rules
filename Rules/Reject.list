@@ -9594,21 +9594,7 @@ URL-REGEX,^https?:\/\/dl\.app\.gtja\.com\/dzswem\/kvController\/.+\.jpg$
 URL-REGEX,^https?:\/\/yxyapi\d\.drcuiyutao\.com\/yxy-api-gateway\/api\/json\/advert\/
 URL-REGEX,^https?:\/\/(api|www)\.zhihu\.com\/((terms\/privacy\/confirm|app_config|banner|commercial_api\/(launch|real_time))|(fringe|zst|drama|adx|commercial|real_time|ad-style-service|banners|market/popover|mqtt|.*(launch|featured-comment-ad|guide|recommendations|community-ad)|search/(top|tab|preset)|ab))
 URL-REGEX,^https?:\/\/ap(i|p)\.bilibili\.com\/((x\/v2|pgc)\/(search\/defaultword|season\/rank\/cn|splash\/)|(pgc/season/rank/cn|x/v2/(rank.*rid=(168|5)|search/(defaultword|hot|recommend|resource))))
-USER-AGENT,Weibo%20intl*
-USER-AGENT,TencentConnect*
-USER-AGENT,AliXAdSDK*
-USER-AGENT,neteasemusic*
-OR,((DOMAIN,news.l.qq.com), (DOMAIN,news.ssp.qq.com))
-OR,((DOMAIN,ct.xiaojukeji.com), (DOMAIN,gwp.xiaojukeji.com))
-OR,((DOMAIN,mobile.da.mgtv.com), (DOMAIN,mobile2.da.mgtv.com))
-OR,((DOMAIN,static-s.iqiyi.com), (DOMAIN,t7z.cupid.iqiyi.com))
-AND,((DOMAIN-KEYWORD,advertise), (USER-AGENT,Cocoa*))
-AND,((DOMAIN,photovms.tv.sohu.com), (NOT,((URL-REGEX,http))))
-AND,((USER-AGENT,osee2*), (NOT,((DOMAIN,static.zhihu.com))), (NOT,((DOMAIN,api.zhihu.com))), (NOT,((DOMAIN,link.zhihu.com))), (NOT,((DOMAIN,lens.zhihu.com))), (NOT,((DOMAIN,www.zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))))
-AND,((USER-AGENT,ZhihuHybrid*), (NOT,((DOMAIN-SUFFIX,zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))))
 URL-REGEX,https?://interface3?.music.163.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot))
-AND,((USER-AGENT, %E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*),(OR,((NOT,((DOMAIN-SUFFIX,music.126.net))), (DOMAIN-KEYWORD,admusic))))
-AND,((USER-AGENT,pixiv*), (NOT,((DOMAIN-KEYWORD,pixiv))))
 URL-REGEX,^https?:\/\/capis-slb\.didapinche\.com\/ad\/
 URL-REGEX,^https://weibointl.api.weibo.cn/portal.php\?a=get_coopen_ads
 URL-REGEX,^https?:\/\/yxyapi2\.drcuiyutao\.com\/yxy-api-gateway\/api\/json\/advert\/getsAd

@@ -31,6 +31,7 @@ if (body['data'].hasOwnProperty('rows')) {
   })
 }
 
+body = JSON.stringify(body)
 $done({
-  body: JSON.stringify(body)
+  body
 })

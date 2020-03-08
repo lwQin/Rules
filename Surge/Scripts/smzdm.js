@@ -1,4 +1,4 @@
-let body = = JSON.parse($response.body)
+let body = JSON.parse($response.body)
 
 // banner 广告
 // 首页 - 推荐 | 好价

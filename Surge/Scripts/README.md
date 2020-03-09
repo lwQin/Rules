@@ -1,3 +1,13 @@
+# bilibili 去广告
+
+```
+[MitM]
+hostname = app.bilibili.com
+
+[Script]
+http-response ^https?:\/\/app\.bilibili\.com\/x\/(feed|space) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
+```
+
 # 什么值得买去广告
 
 ```

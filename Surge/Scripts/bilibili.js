@@ -69,7 +69,7 @@ function tab(body) {
  * @param {*} body
  */
 function mine(body) {
-  let sessions = body.filter((session) => {
+  let sessions = body.sessions.filter((session) => {
     const titleWhiteList = ['离线缓存', '历史记录', '我的收藏', '稍后再看', '我的钱包', '大会员', '我的客服']
     let items = session.items.filter(item => titleWhiteList.includes(item.title))
     session.items = items

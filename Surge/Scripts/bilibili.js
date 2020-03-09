@@ -69,14 +69,14 @@ function tab(body) {
  * @param {*} body
  */
 function mine(body) {
-  let sessions = body.data.sessions.filter((session) => {
+  let sections = body.data.sections.filter((section) => {
     const titleWhiteList = ['离线缓存', '历史记录', '我的收藏', '稍后再看', '我的钱包', '大会员', '我的客服']
-    let items = session.items.filter(item => titleWhiteList.includes(item.title))
-    session.items = items
+    let items = section.items.filter(item => titleWhiteList.includes(item.title))
+    section.items = items
 
-    return !session.name === '创作中心'
+    return !section.name === '创作中心'
   })
-  body.data.sections = sessions
+  body.data.sections = sections
 }
 
 /**

@@ -1,5 +1,7 @@
 # bilibili 去广告
 
+基于 [onewayticket255](https://github.com/onewayticket255/Surge-Script) 规则修改
+
 ```
 [MitM]
 hostname = app.bilibili.com

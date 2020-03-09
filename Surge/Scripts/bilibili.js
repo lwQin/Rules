@@ -85,6 +85,6 @@ function mine(body) {
  */
 function view(body) {
   delete body.data.cms
-  let relates = body.data.relates.filter(relate => !relate.hasOwnProperty('is_ad'))
+  let relates = body.data.relates.filter(relate => !relate.hasOwnProperty('is_ad') || relate.hasOwnProperty('aid'))
   body.data.relates = relates
 }

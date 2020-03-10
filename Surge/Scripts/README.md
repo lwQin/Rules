@@ -7,7 +7,7 @@
 hostname = app.bilibili.com
 
 [Script]
-http-response ^https?:\/\/app\.bilibili\.com\/x\/(feed|space) requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
+http-response ^https?:\/\/app\.bilibili\.com\/x\/(v2\/(feed\/index|space|account\/mine|view)|resource\/show\/tab)\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 ```
 
 # 什么值得买去广告

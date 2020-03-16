@@ -74,7 +74,7 @@ function mine(body) {
     let items = section.items.filter(item => titleWhiteList.includes(item.title))
     section.items = items
 
-    return section.title !== '创作中心'
+    return true
   })
   body.data.sections = sections
 }

@@ -70,7 +70,7 @@ function tab(body) {
  */
 function mine(body) {
   let sections = body.data.sections.filter((section) => {
-    const titleWhiteList = ['离线缓存', '历史记录', '我的收藏', '稍后再看', '我的钱包', '大会员', '我的客服']
+    const titleWhiteList = ['创作首页', '稿件管理', '离线缓存', '历史记录', '我的收藏', '稍后再看', '我的钱包', '大会员', '我的客服']
     let items = section.items.filter(item => titleWhiteList.includes(item.title))
     section.items = items
 

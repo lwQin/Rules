@@ -1,7 +1,3 @@
-# 图标
-
-图标基于 [Qure](https://github.com/Koolson/Qure) 与 [Zure](https://github.com/limbopro/Zure), 有所删除, 并有新增自用图标
-
 # 规则
 
 | 文件名           | 链接                                                                                            | 说明                                                                                                                                         |
@@ -14,4 +10,4 @@
 
 # 脚本
 
-todo(QuantumultX 移除了远程脚本)
+见[说明](https://github.com/lwQin/Rules/tree/master/Surge/Scripts)

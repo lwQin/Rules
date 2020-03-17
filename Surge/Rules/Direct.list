@@ -1,4 +1,2 @@
-URL-REGEX,^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start
-URL-REGEX,^https?:\/\/api\.m\.jd.com\/client\.action\?functionId=(start|queryMaterialAdverts)
 DOMAIN-SUFFIX,promotion.aliyun.com
 DOMAIN-SUFFIX,analysys.cn

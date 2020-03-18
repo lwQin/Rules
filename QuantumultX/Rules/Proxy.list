@@ -1,3 +1,5 @@
+# custom proxy
+HOST-KEYWORD,git,Outside
 HOST-KEYWORD,gitlab,Outside
 HOST-KEYWORD,nyaa,Outside
 HOST-KEYWORD,mixpanel.com,Outside

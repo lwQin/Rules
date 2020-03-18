@@ -1,3 +1,4 @@
+# wechat rules
 PROCESS-NAME,/Applications/WeChat.app/Contents/MacOS/WeChat
 USER-AGENT,MicroMessenger*
 USER-AGENT,%E5%BE%AE%E4%BF%A1*

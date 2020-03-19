@@ -1,0 +1,23 @@
+Proxy = select, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Domestic = select, Direct, Proxy, 🇨🇳 回国节点
+Wechat = select, Direct, 🇭🇰 香港 IPLC 节点
+Others = select, Direct, Proxy, Domestic
+Apple = select, Direct, Proxy
+AsianTV = select, Direct, Domestic, Proxy, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+GlobalTV = select, Proxy, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Netflix = select, Proxy, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Spotify = select, Proxy, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Telegram = select, Proxy, Direct
+Steam = select, Proxy, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+PayPal = select, Proxy, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Speedtest = select, Direct, 🇭🇰 香港 IPLC 节点, 🇭🇰 香港节点, 🇲🇴 澳门节点, 🇨🇳 台湾节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇺🇸 美国节点, 其他节点
+Netease Music = select, Direct, Domestic
+🇨🇳 回国节点 = url-test, {{ getNodeNames(nodeList, customFilters.cnFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇭🇰 香港节点 = url-test, {{ getNodeNames(nodeList, customFilters.hkFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇭🇰 香港 IPLC 节点 = url-test, {{ getNodeNames(nodeList, customFilters.hkIplcFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇲🇴 澳门节点 = url-test, {{ getNodeNames(nodeList, customFilters.mcFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇨🇳 台湾节点 = url-test, {{ getNodeNames(nodeList, customFilters.twFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇸🇬 新加坡节点 = url-test, {{ getNodeNames(nodeList, customFilters.sgFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇯🇵 日本节点 = url-test, {{ getNodeNames(nodeList, customFilters.jpFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+🇺🇸 美国节点 = url-test, {{ getNodeNames(nodeList, customFilters.usFilter) }}, url = {{ proxyTestUrl }}, interval = 600
+其他节点 = select, {{ getNodeNames(nodeList, customFilters.otherFilter) }}

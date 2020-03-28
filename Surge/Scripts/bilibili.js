@@ -15,6 +15,9 @@ if ($request.url.startsWith('https://app.bilibili.com/x/v2/account/mine?access_k
 if ($request.url.startsWith('https://app.bilibili.com/x/v2/view?access_key')) {
   view(body)
 }
+if ($request.url.startsWith('https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_history?access_key')) {
+  dynamicHistory(body)
+}
 
 body = JSON.stringify(body)
 $done({
@@ -23,7 +26,7 @@ $done({
 
 /**
  * 首页 banner 与信息流去广告
- * @param {*} body 
+ * @param {*} body
  */
 function feed(body) {
   let newItems = body.data.items.filter((item) => {
@@ -40,7 +43,7 @@ function feed(body) {
 
 /**
  * 去除空间页面推广橱窗
- * @param {*} body 
+ * @param {*} body
  */
 function space(body) {
   delete body.data.ad_source_content_v2
@@ -49,7 +52,7 @@ function space(body) {
 
 /**
  * 去顶部游戏中心, 自定义顶部 tab
- * @param {*} body 
+ * @param {*} body
  */
 function tab(body) {
   const topTabNameWhiteList = ['直播', '推荐', '热门', '追番', '影视', '学习区']
@@ -81,10 +84,26 @@ function mine(body) {
 
 /**
  * 视频页相关视频去广告
- * @param {*} body 
+ * @param {*} body
  */
 function view(body) {
   delete body.data.cms
   let relates = body.data.relates.filter(relate => !relate.hasOwnProperty('is_ad') && relate.hasOwnProperty('aid'))
   body.data.relates = relates
+}
+
+/**
+ * 动态信息流去广告
+ * @param {*} body
+ */
+function dynamicHistory(body) {
+  let cards = []
+  let oldCards = body.data.cards
+  oldCards.array.forEach(elememt => {
+    let cardDetail = JSON.parse(elememt.card)
+    if (!cardDetail.hasOwnProperty('ad_ctx')) {
+      cards.push(elememt)
+    }
+  });
+  body.data.cards = cards
 }

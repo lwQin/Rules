@@ -99,7 +99,7 @@ function view(body) {
 function dynamicHistory(body) {
   let cards = []
   let oldCards = body.data.cards
-  oldCards.array.forEach(elememt => {
+  oldCards.forEach(elememt => {
     let cardDetail = JSON.parse(elememt.card)
     if (!cardDetail.hasOwnProperty('ad_ctx')) {
       cards.push(elememt)

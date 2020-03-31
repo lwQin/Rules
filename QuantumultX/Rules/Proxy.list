@@ -1,4 +1,5 @@
 # custom proxy
+HOST-SUFFIX,ip.sb,Outside
 HOST-KEYWORD,git,Outside
 HOST-KEYWORD,gitlab,Outside
 HOST-KEYWORD,nyaa,Outside

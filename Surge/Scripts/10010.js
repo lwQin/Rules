@@ -11,10 +11,10 @@ if ($request.url.includes('accountListData')) {
   delete body.newsRsp
   delete body.fiveGRsp
 } else if ($request.url.includes('messagepush')) {
-  // messagepush.html
+  // messagepush.htm
   body.data = {}
 } else if ($request.url.includes('getDataFromService')) {
-  // getDataFromService.html
+  // getDataFromService.htm
   if ($request.method === 'POST' && body.hasOwnProperty('data')) {
     delete body.data
   } else if ($request.method === 'GET') {

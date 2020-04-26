@@ -1,21 +1,16 @@
 let body = JSON.parse($response.body)
 
-if ($request.url.startsWith('https://app.bilibili.com/x/v2/feed/index?access_key')) {
+if ($request.url.includes('x/v2/feed/index')) {
   feed(body)
-}
-if ($request.url.startsWith('https://app.bilibili.com/x/v2/space?access_key')) {
+} else if ($request.url.includes('x/v2/space')) {
   space(body)
-}
-if ($request.url.startsWith('https://app.bilibili.com/x/resource/show/tab?access_key')) {
+} else if ($request.url.includes('x/resource/show/tab')) {
   tab(body)
-}
-if ($request.url.startsWith('https://app.bilibili.com/x/v2/account/mine?access_key')) {
+} else if ($request.url.includes('x/v2/account/mine')) {
   mine(body)
-}
-if ($request.url.startsWith('https://app.bilibili.com/x/v2/view?access_key')) {
+} else if ($request.url.includes('x/v2/view')) {
   view(body)
-}
-if ($request.url.startsWith('https://api.vc.bilibili.com/dynamic_svr/v1/dynamic_svr/dynamic_history?access_key')) {
+} else if ($request.url.includes('dynamic_history')) {
   dynamicHistory(body)
 }
 

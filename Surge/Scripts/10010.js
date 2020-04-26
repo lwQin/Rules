@@ -18,12 +18,12 @@ if ($request.url.includes('accountListData')) {
   if ($request.method === 'POST' && body.hasOwnProperty('data')) {
     delete body.data
   }
+  console.log('get: ' + body)
 } else {
   // getHomePageAd | getTodayCommendAd
   body = {}
 }
 
-console.log(body)
 body = (body === undefined || body === null || body === '') ? {} : JSON.stringify(body)
 $done({
   body

@@ -14,7 +14,7 @@ if ($request.url.includes('accountListData')) {
   // messagepush.html
   body.data = {}
 } else {
-  // getHomePageAd |getTodayCommendAd
+  // getHomePageAd | getTodayCommendAd | getDataFromService
   body = {}
 }
 

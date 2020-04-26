@@ -2,6 +2,11 @@
 #!desc=Bilibili remove ads
 #!system=ios
 
+[Rule]
+URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
+URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
+AND,((USER-AGENT,bili*), (NOT,((DOMAIN-SUFFIX,bilibili.com))),(NOT,((DOMAIN-SUFFIX,hdslb.com)))),REJECT
+
 [Script]
 http-response ^https?:\/\/app\.bilibili\.com\/x\/(v2\/(feed\/index|space|account\/mine|view)|resource\/show\/tab)\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_history\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js

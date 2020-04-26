@@ -17,8 +17,9 @@ if ($request.url.includes('accountListData')) {
   // getDataFromService.html
   if ($request.method === 'POST' && body.hasOwnProperty('data')) {
     delete body.data
+  } else if ($request.method === 'GET') {
+    body = {}
   }
-  console.log(body)
 } else {
   // getHomePageAd | getTodayCommendAd
   body = {}

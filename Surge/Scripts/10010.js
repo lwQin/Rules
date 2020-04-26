@@ -23,7 +23,8 @@ if ($request.url.includes('accountListData')) {
   body = {}
 }
 
-body = body === undefined || body === null || body === '' ? {} : JSON.stringify(body)
+console.log(body)
+body = (body === undefined || body === null || body === '') ? {} : JSON.stringify(body)
 $done({
   body
 })

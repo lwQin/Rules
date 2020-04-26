@@ -13,6 +13,12 @@ if ($request.url.includes('accountListData')) {
 } else if ($request.url.includes('messagepush')) {
   // messagepush.html
   body.data = {}
+} else if ($request.url.includes('getDataFromService')) {
+  // getDataFromService.html
+  console.log($response.method);
+  if ($response.method.toUpperCase() === 'POST' && body.hasOwnProperty('data')) {
+    delete body.data
+  }
 } else {
   // getHomePageAd | getTodayCommendAd
   body = {}

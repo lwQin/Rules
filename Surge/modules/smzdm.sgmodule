@@ -1,0 +1,9 @@
+#!name=SMZDM
+#!desc=SMZDM remove ads
+#!system=ios
+
+[Script]
+http-response ^https?:\/\/(h(aojia|omepage)|article)-api\.smzdm\.com\/home requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/smzdm.js
+
+[MITM]
+hostname = %APPEND% homepage-api.smzdm.com, haojia-api.smzdm.com, article-api.smzdm.com

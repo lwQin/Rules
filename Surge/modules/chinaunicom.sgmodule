@@ -1,0 +1,9 @@
+#!name=China Unicom
+#!desc=China Unicom remove ads
+#!system=ios
+
+[Script]
+http-response ^https:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getHomePageAd requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
+
+[MITM]
+hostname = %APPEND% m.client.10010.com

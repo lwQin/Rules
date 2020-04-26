@@ -15,8 +15,7 @@ if ($request.url.includes('accountListData')) {
   body.data = {}
 } else if ($request.url.includes('getDataFromService')) {
   // getDataFromService.html
-  console.log($request.method);
-  if ($request.method.toUpperCase() === 'POST' && body.hasOwnProperty('data')) {
+  if ($request.method === 'POST' && body.hasOwnProperty('data')) {
     delete body.data
   }
 } else {
@@ -24,7 +23,7 @@ if ($request.url.includes('accountListData')) {
   body = {}
 }
 
-body = JSON.stringify(body)
+body = body === undefined || body === null || body === '' ? {} : JSON.stringify(body)
 $done({
   body
 })

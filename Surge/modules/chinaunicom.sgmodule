@@ -2,6 +2,9 @@
 #!desc=China Unicom remove ads
 #!system=ios
 
+[Rule]
+DOMAIN-SUFFIX,pstatp.com,reject
+
 [Script]
 http-response ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getTodayCommendAd) requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
 http-response ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/(accountListData|indexExpressNewsAndRecommend)\.htm requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js

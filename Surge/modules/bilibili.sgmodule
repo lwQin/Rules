@@ -1,5 +1,5 @@
 #!name=Bilibili
-#!desc=Bilibili remove ads
+#!desc=remove bilibili ios app ads
 #!system=ios
 
 [Rule]
@@ -9,7 +9,8 @@ AND,((USER-AGENT,bili*), (NOT,((DOMAIN-SUFFIX,bilibili.com))),(NOT,((DOMAIN-SUFF
 
 [Script]
 http-response ^https?:\/\/app\.bilibili\.com\/x\/(v2\/(feed\/index|space|account\/mine|view)|resource\/show\/tab)\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
-http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/dynamic_history\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
+#http-response ^https?:\/\/api\.vc\.bilibili\.com\/((dynamic_svr\/v1\/dynamic_svr\/dynamic_new)|(topic_svr\/v1\/topic_svr\/hot_entry))\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
+http-response ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr\/hot_entry\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.vc.bilibili.com

@@ -1,16 +1,3 @@
-//  else if ($request.url.includes('x/v2/space')) {
-//   space(body)
-// } else if ($request.url.includes('x/resource/show/tab')) {
-//   tab(body)
-// } else if ($request.url.includes('x/v2/account/mine')) {
-//   mine(body)
-// } else if ($request.url.includes('x/v2/view')) {
-//   view(body)
-// } else if ($request.url.includes('dynamic_history')) {
-//   dynamicHistory(body)
-// }
-
-
 /**
  * 去顶部游戏中心, 自定义顶部 tab
  * @param {*} body
@@ -55,8 +42,8 @@ function mine(body) {
       const titleWhiteList = ['创作首页', '稿件管理', '个性装扮', '我的钱包', '会员购中心', '联系客服', '设置']
       let items = section.items.filter(item => titleWhiteList.includes(item.title))
       section.items = items
-      return true
     }
+    return true
   })
   body.data.sections_v2 = sections
 }
@@ -67,6 +54,16 @@ function mine(body) {
  */
 function hotEntry(body) {
   body.data = {}
+}
+
+/**
+ * 视频页相关视频去广告
+ * @param {*} body
+ */
+function view(body) {
+  delete body.data.cms
+  let relates = body.data.relates.filter(relate => !relate.is_ad)
+  body.data.relates = relates
 }
 
 /**
@@ -94,15 +91,6 @@ function space(body) {
   delete body.data.ad_shop_type
 }
 
-/**
- * 视频页相关视频去广告
- * @param {*} body
- */
-function view(body) {
-  delete body.data.cms
-  let relates = body.data.relates.filter(relate => !relate.hasOwnProperty('is_ad') && relate.hasOwnProperty('aid'))
-  body.data.relates = relates
-}
 
 
 if ($request.url.indexOf('/resource/show/tab') !== -1) {
@@ -129,6 +117,13 @@ if ($request.url.indexOf('/resource/show/tab') !== -1) {
 } else if ($request.url.indexOf('/topic_svr/hot_entry') !== -1) {
   let body = JSON.parse($response.body)
   hotEntry(body)
+  body = JSON.stringify(body)
+  $done({
+    body
+  })
+} else if ($request.url.indexOf('/view') !== -1) {
+  let body = JSON.parse($response.body)
+  view(body)
   body = JSON.stringify(body)
   $done({
     body

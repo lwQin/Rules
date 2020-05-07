@@ -62,7 +62,7 @@ function hotEntry(body) {
  */
 function view(body) {
   delete body.data.cms
-  let relates = body.data.relates.filter(relate => !relate.is_ad)
+  let relates = body.data.relates.filter(relate => !relate.is_ad && relate.aid)
   body.data.relates = relates
 }
 

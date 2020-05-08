@@ -1,6 +1,6 @@
 console.log($request.method);
 console.log($request.url);
-if ($request.url.indexOf("accountListData.htm") && $response.body) {
+if ($request.url.includes("accountListData.htm") && $response.body) {
   let body = JSON.parse($response.body);
   console.log(body);
   delete body.adv;
@@ -9,7 +9,7 @@ if ($request.url.indexOf("accountListData.htm") && $response.body) {
   $done({
     body
   });
-} else if ($request.url.indexOf("indexExpressNewsAndRecommend.htm") && $response.body) {
+} else if ($request.url.includes("indexExpressNewsAndRecommend.htm") && $response.body) {
   let body = JSON.parse($response.body);
   console.log(body);
   body.content = [];
@@ -18,21 +18,21 @@ if ($request.url.indexOf("accountListData.htm") && $response.body) {
   $done({
     body
   });
-} else if ($request.url.indexOf("getHomePageAd") && $response.body) {
+} else if ($request.url.includes("getHomePageAd") && $response.body) {
   let body = {};
   body = JSON.stringify(body);
   console.log(body);
   $done({
     body
   });
-} else if ($request.url.indexOf("getTodayCommendAd") && $response.body) {
+} else if ($request.url.includes("getTodayCommendAd") && $response.body) {
   let body = {};
   body = JSON.stringify(body);
   console.log(body);
   $done({
     body
   });
-} else if ($request.url.indexOf("getDataFromService") && $response.body) {
+} else if ($request.url.includes("getDataFromService") && $response.body) {
   if ($request.method === "POST") {
     let body = {};
     body = JSON.stringify(body);

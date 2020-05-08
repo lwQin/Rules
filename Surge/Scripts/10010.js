@@ -1,3 +1,6 @@
+console.log('method: ', $request.method)
+console.log('url: ', $response.url)
+console.log('body: ', $response.body)
 if ($request.url.indexOf('accountListData.htm')) {
   let body = JSON.parse($response.body)
   delete body.adv

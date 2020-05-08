@@ -23,6 +23,7 @@ if ($request.url.indexOf('accountListData.htm')) {
     body
   })
 } else if ($request.url.indexOf('getDataFromService')) {
+  console.log($request.method)
   if ($request.method === 'POST') {
     let body = JSON.stringify({})
     $done({

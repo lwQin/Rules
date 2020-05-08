@@ -11,6 +11,7 @@ http-response ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/indexE
 http-response ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getHomePageAd requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
 http-response ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getTodayCommendAd requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
 http-response ^https?:\/\/m\.client\.10010\.com\/getDataFromService requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
+http-response ^https?:\/\/m\.client\.10010\.com\/mobileService/query/Recommend.htm requires-body=true,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/10010.js
 
 [MITM]
 hostname = %APPEND% m.client.10010.com 

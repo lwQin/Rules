@@ -31,6 +31,13 @@ if ($request.url.includes("accountListData.htm") && $response.body) {
     $done({
       body
     });
+  } else {
+    $done();
   }
-  $done();
+} else if ($request.url.includes("Recommend.htm") && $response.body) {
+  let body = [];
+  body = JSON.stringify(body);
+  $done({
+    body
+  });
 }

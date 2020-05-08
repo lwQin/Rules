@@ -1,5 +1,5 @@
 console.log($request.method)
-console.log($response.url)
+console.log($request.url)
 console.log($response.body)
 if ($request.url.indexOf('accountListData.htm')) {
   let body = JSON.parse($response.body)

@@ -7,34 +7,35 @@ if ($request.url.indexOf("accountListData.htm") && $response.body) {
   body = JSON.stringify(body);
   console.log(body);
   $done({
-    body,
+    body
   });
-} else if ( $request.url.indexOf("indexExpressNewsAndRecommend.htm") && $response.body ) {
+} else if ($request.url.indexOf("indexExpressNewsAndRecommend.htm") && $response.body) {
   let body = JSON.parse($response.body);
   body.content = [];
   body = JSON.stringify(body);
   console.log(body);
   $done({
-    body,
+    body
   });
 } else if ($request.url.indexOf("getHomePageAd") && $response.body) {
   let body = JSON.stringify({});
   console.log(body);
   $done({
-    body,
+    body
   });
 } else if ($request.url.indexOf("getTodayCommendAd") && $response.body) {
   let body = JSON.stringify({});
   console.log(body);
   $done({
-    body,
+    body
   });
 } else if ($request.url.indexOf("getDataFromService") && $response.body) {
   if ($request.method === "POST") {
-    let body = JSON.stringify({});
+    let body = {};
+    body = JSON.stringify(body);
     console.log(body)
     $done({
-      body,
+      body
     });
   }
 }

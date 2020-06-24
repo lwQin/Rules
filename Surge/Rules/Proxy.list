@@ -1,4 +1,5 @@
 # custom proxy
+DOMAIN-SUFFIX,jetbrains.com
 DOMAIN-SUFFIX,ip.sb
 DOMAIN-KEYWORD,git
 DOMAIN-KEYWORD,gitlab

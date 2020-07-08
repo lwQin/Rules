@@ -1,4 +1,5 @@
 # custom proxy
+DOMAIN-SUFFIX,www.udacity.com
 DOMAIN-SUFFIX,iterm2.com
 DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,jetbrains.com

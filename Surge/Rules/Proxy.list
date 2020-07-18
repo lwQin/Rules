@@ -1,4 +1,5 @@
 # custom proxy
+DOMAIN-SUFFIX,pstmn.io
 DOMAIN-SUFFIX,virtualbox.org
 DOMAIN-SUFFIX,filezilla-project.org
 DOMAIN-SUFFIX,medium.com

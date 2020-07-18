@@ -1,4 +1,6 @@
 # custom proxy
+DOMAIN-SUFFIX,virtualbox.org
+DOMAIN-SUFFIX,filezilla-project.org
 DOMAIN-SUFFIX,medium.com
 DOMAIN-SUFFIX,www.udacity.com
 DOMAIN-SUFFIX,iterm2.com

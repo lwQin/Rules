@@ -289,12 +289,6 @@
 # > 淘宝
 ^https?:\/\/gw.alicdn.com\/tfs\/.+-1125-1602 - reject
 
-# > 豆瓣
-^https?:\/\/(\d{1,3}.){1,3}\d{1,3}\/view\/dale-online\/dale_ad\/ - reject
-^https?:\/\/api.douban.com\/v2\/app_ads\/common_ads - reject
-^https?:\/\/frodo.douban.com\/api\/v2\/movie\/banner - reject
-^https?:\/\/img\d.doubanio.com\/view\/dale-online\/dale_ad\/ - reject
-
 # > 斗鱼
 ^https?:\/\/capi.douyucdn.cn\/lapi\/sign\/app(api)?\/getinfo\?client_sys=ios - reject
 ^https?:\/\/capi.douyucdn.cn\/api\/ios_app\/check_update - reject

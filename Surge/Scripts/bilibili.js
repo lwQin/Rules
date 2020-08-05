@@ -96,9 +96,7 @@ function space(body) {
  * @param {*} body
  */
 function uplist(body) {
-  let list = body.data.list.filter(e => {
-    e.type === 1
-  })
+  let list = body.data.list.filter(e => e.type === 1)
   body.data.list = list
 }
 

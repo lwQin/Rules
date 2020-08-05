@@ -96,13 +96,9 @@ function space(body) {
  * @param {*} body
  */
 function uplist(body) {
-  let list = []
-  let oldList = body.data.list
-  oldList.forEach(elememt => {
-    if (elememt.type === 1) {
-      list.push(elememt)
-    }
-  });
+  let list = body.data.list.filter(e => {
+    e.type === 1
+  })
   body.data.list = list
 }
 

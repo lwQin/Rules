@@ -91,7 +91,20 @@ function space(body) {
   delete body.data.ad_shop_type
 }
 
-
+/**
+ * 去除动态页非直播 up
+ * @param {*} body
+ */
+function uplist(body) {
+  let list = []
+  let oldList = body.data.list
+  oldList.forEach(elememt => {
+    if (elememt.type === 1) {
+      list.push(elememt)
+    }
+  });
+  body.data.list = list
+}
 
 if ($request.url.indexOf('/resource/show/tab') !== -1) {
   let body = JSON.parse($response.body)
@@ -124,6 +137,13 @@ if ($request.url.indexOf('/resource/show/tab') !== -1) {
 } else if ($request.url.indexOf('/view') !== -1) {
   let body = JSON.parse($response.body)
   view(body)
+  body = JSON.stringify(body)
+  $done({
+    body
+  })
+} else if ($request.url.indexOf('/dynamic_svr/v1/dynamic_svr/mix_uplist') !== -1) {
+  let body = JSON.parse($response.body)
+  uplist(body)
   body = JSON.stringify(body)
   $done({
     body

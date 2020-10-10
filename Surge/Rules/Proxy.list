@@ -1,4 +1,5 @@
 # custom proxy
+DOMAIN-KEYWORD,oracle
 DOMAIN-SUFFIX,fc2club.com
 DOMAIN-SUFFIX,pstmn.io
 DOMAIN-SUFFIX,virtualbox.org

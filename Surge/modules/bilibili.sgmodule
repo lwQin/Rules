@@ -5,6 +5,7 @@
 [Rule]
 URL-REGEX,https://app.bilibili.com/x/v2/(splash|search/(defaultword|square)),REJECT
 URL-REGEX,https://api.bilibili.com/x/v2/dm/ad,REJECT
+URL-REGEX,^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.Comic\/ListFlash$,REJECT
 
 [Script]
 http-response ^https?:\/\/app\.bilibili\.com\/x\/(resource\/show\/tab|(v2\/(feed\/index|account\/mine|view)))\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
@@ -12,4 +13,4 @@ http-response ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr\/hot_
 http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 
 [MITM]
-hostname = %APPEND% app.bilibili.com, api.vc.bilibili.com
+hostname = %APPEND% app.bilibili.com, api.vc.bilibili.com, manga.bilibili.com

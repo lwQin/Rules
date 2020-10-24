@@ -4,6 +4,7 @@
 
 [Script]
 http-response ^https?:\/\/capi\.douyucdn\.cn\/lapi\/athena\/room\/mFollowed\?client_sys requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/douyu.js
+http-response ^https?:\/\/apiv3\.douyucdn\.cn\/mgapi\/livenc\/mcenter\/followRoomsOnlineV2\?client_sys requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/douyu.js
 
 [MITM]
-hostname = %APPEND% capi.douyucdn.cn
+hostname = %APPEND% capi.douyucdn.cn, apiv3.douyucdn.cn

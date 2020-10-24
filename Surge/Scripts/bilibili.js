@@ -38,12 +38,14 @@ function feed(body) {
  */
 function mine(body) {
   const sections = body.data.sections_v2.filter((section) => {
-    if (section.title && section.title ==='创作中心') {
-      return false
-    } else {
-      const titleWhiteList = ['创作首页', '稿件管理', '个性装扮', '我的钱包', '会员购中心', '联系客服', '设置']
-      const items = section.items.filter(item => titleWhiteList.includes(item.title))
-      section.items = items
+    if (section.title) {
+      if (section.title ==='创作中心') {
+        return false
+      } else {
+        const titleWhiteList = ['创作首页', '稿件管理', '个性装扮', '我的钱包', '会员购中心', '联系客服', '设置']
+        const items = section.items.filter(item => titleWhiteList.includes(item.title))
+        section.items = items
+      }
     }
     return true
   })

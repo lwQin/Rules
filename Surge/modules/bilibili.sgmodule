@@ -11,7 +11,7 @@ URL-REGEX,^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v1\.Comic\/ListFlash$,R
 http-response ^https?:\/\/app\.bilibili\.com\/x\/(resource\/show\/tab|(v2\/(feed\/index|account\/mine|view)))\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 http-response ^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr\/hot_entry\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 http-response ^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
-http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
+http-response ^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\?access_key requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/bilibili.js
 
 [MITM]
 hostname = %APPEND% app.bilibili.com, api.vc.bilibili.com, api.live.bilibili.com, manga.bilibili.com

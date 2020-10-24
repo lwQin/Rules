@@ -533,8 +533,8 @@ http?:\/\/123.59.30.10\/adv\/advInfos - reject
 ^https?:\/\/e.dangdang.com\/media\/api.+\?action=getDeviceStartPage - reject
 
 # > 什么值得买
-^https?:\/\/api.smzdm.com\/v1\/util\/loading - reject
-^https?:\/\/api.smzdm.com\/v2\/util\/banner - reject
+^https?:\/\/app-api.smzdm.com\/util\/loading - reject
+^https?:\/\/app-api.smzdm.com\/util\/banner - reject
 
 # > 飞常准
 ^https?:\/\/app.veryzhun.com\/ad\/admob - reject

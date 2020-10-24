@@ -104,6 +104,14 @@ function uplist(body) {
   body.data.list = list
 }
 
+/**
+ * 直播广告
+ * @param {*} body 
+ */
+function liveRoomInfo(body) {
+  delete body.data.activity_banner_info
+}
+
 if ($request.url.indexOf('/resource/show/tab') !== -1) {
   let body = JSON.parse($response.body)
   tab(body)
@@ -147,11 +155,11 @@ if ($request.url.indexOf('/resource/show/tab') !== -1) {
     body
   })
 }
-// else if ($request.url.indexOf('/dynamic_svr/dynamic_new') !== -1) {
-//   let body = JSON.parse($response.body)
-//   dynamic(body)
-//   body = JSON.stringify(body)
-//   $done({
-//     body
-//   })
-// }
+else if ($request.url.indexOf('/getInfoByRoom') !== -1) {
+  let body = JSON.parse($response.body)
+  liveRoomInfo(body)
+  body = JSON.stringify(body)
+  $done({
+    body
+  })
+}

@@ -10,7 +10,7 @@ function tab(body) {
   let top = body.data.top.filter(top => top.name === '消息')
   body.data.top = top
 
-  const bottomNameWhiteList = ['首页', '频道', '动态', '我的']
+  const bottomNameWhiteList = ['首页', '动态', '我的']
   let bottom = body.data.bottom.filter(bottom => bottomNameWhiteList.includes(bottom.name))
   body.data.bottom = bottom
 }
@@ -37,10 +37,12 @@ function feed(body) {
  * @param {*} body
  */
 function mine(body) {
-  let sections = body.data.sections_v2.filter((section) => {
-    if (section.title) {
+  const sections = body.data.sections_v2.filter((section) => {
+    if (section.title && section.title ==='创作中心') {
+      return false
+    } else {
       const titleWhiteList = ['创作首页', '稿件管理', '个性装扮', '我的钱包', '会员购中心', '联系客服', '设置']
-      let items = section.items.filter(item => titleWhiteList.includes(item.title))
+      const items = section.items.filter(item => titleWhiteList.includes(item.title))
       section.items = items
     }
     return true

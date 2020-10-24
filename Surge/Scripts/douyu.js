@@ -17,4 +17,5 @@ function removeRoomListNoLive(body) {
   body.data.room_list = body.data.room_list.filter((room) => {
     return room.videoLoop === 0
   })
+  body.data.total = body.data.room_list.length
 }

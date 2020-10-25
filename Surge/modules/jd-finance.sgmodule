@@ -1,0 +1,6 @@
+#!name=京东金融
+#!desc=京东金融 app 广告移除
+#!system=ios
+
+[Rule]
+URL-REGEX,^https:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/na\/m\/getLoadingPicture,REJECT

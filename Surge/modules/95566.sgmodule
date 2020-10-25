@@ -1,9 +1,0 @@
-#!name=中行
-#!desc=中行 app 广告移除
-#!system=ios
-
-[Script]
-http-response ^https?:\/\/mos\.boc\.cn\/ubas-mgateway-webapp/ubas010010 requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/95566.js
-
-[MITM]
-hostname = %APPEND% mbs.boc.cn

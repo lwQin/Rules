@@ -1,0 +1,6 @@
+#!name=Douban
+#!desc=remove douban ios app ads
+#!system=ios
+
+[Rule]
+URL-REGEX,^https:\/\/api\.douban\.com\/v[0-9]+\/app_ads,REJECT

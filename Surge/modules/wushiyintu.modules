@@ -1,0 +1,6 @@
+#!name=五十音图
+#!desc=移除五十音图广告
+#!system=ios
+
+[Rule]
+URL-REGEX,https://minilangapp.izaodao.com/rest/app/v[0-9]+/advertisingPush/getAdvertisingPushV[0-9]+,REJECT

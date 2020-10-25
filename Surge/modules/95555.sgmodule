@@ -1,0 +1,6 @@
+#!name=招行
+#!desc=招行相关 app 广告移除
+#!system=ios
+
+[Rule]
+URL-REGEX,^https:\/\/mlife\.cmbchina\.com\/ClientFaceService\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec$,REJECT

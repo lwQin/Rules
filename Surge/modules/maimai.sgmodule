@@ -1,0 +1,13 @@
+#!name=MaiMai
+#!desc=remove maimai ios app ads
+#!system=ios
+
+[Rule]
+URL-REGEX,^https:\/\/api\.taou\.com\/sdk\/global\/splash_ad,REJECT
+URL-REGEX,^https:\/\/open\.taou\.com\/maimai\/launch_ad,REJECT
+
+[Script]
+http-response ^https?:\/\/open\.taou\.com\/maimai\/feed\/v5\/focus_feed\?access_token requires-body=1,max-size=-1,script-path=https://raw.githubusercontent.com/lwQin/Rules/master/Surge/Scripts/maimai.js
+
+[MITM]
+hostname = %APPEND% open.taou.com
